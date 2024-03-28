@@ -1,5 +1,5 @@
 // Import all of Bootstrap's JS
-import * as bootstrap from "bootstrap";
+// import * as bootstrap from "bootstrap";
 
 class Meal {
   #id;
@@ -513,7 +513,8 @@ class App {
   #setLimit(evt) {
     evt.preventDefault();
 
-    const modal = bootstrap.Modal.getInstance("#limit-modal");
+    const limitModalEl = document.getElementById("limit-modal");
+    const modal = bootstrap.Modal.getInstance(limitModalEl);
     const limit = document.getElementById("limit");
 
     if (limit.value === "" || isNaN(limit.value) || Number(limit.value) <= 0) {
